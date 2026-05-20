@@ -328,12 +328,7 @@ a.hero-badge:hover {
   display: block;
   object-fit: contain;
 }
-/* ATHENE logo has little inner whitespace — keep it compact */
-.affil-logo .logo-athene {
-  height: 42px;
-}
-/* TU Darmstadt SVG has ~25% whitespace margin baked into its viewBox,
-   so we render it taller so the visible content matches ATHENE's size */
+/* TU Darmstadt SVG has built-in whitespace — size it consistently */
 .affil-logo .logo-tuda {
   height: 68px;
 }

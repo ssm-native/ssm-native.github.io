@@ -1,6 +1,6 @@
-# securecoder.github.io
+# ssm-native.github.io
 
-This is the source code for the website of SecureCoder from the [Software Technology Group](https://www.stg.tu-darmstadt.de) at Technische Universität Darmstadt
+This is the source code for the website of SSM Native from the [Software Technology Group](https://www.stg.tu-darmstadt.de) at Technische Universität Darmstadt
 
 ## Run Locally
 
