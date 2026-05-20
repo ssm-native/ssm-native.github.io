@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="SecureCoder, Security-aware code generation research at TU Darmstadt."
+        />
+        <meta
+            name="keywords"
+            content="SecureCoder, secure code generation, LLM, security, TU Darmstadt, benchmarking"
+        />
+        <title>SecureCoder, Security-Aware Code Generation</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <!-- ========== NAVBAR ========== -->
+        <nav id="navbar" role="navigation" aria-label="main navigation">
+            <div class="nav-inner">
+                <a class="nav-brand" href="#about">
+                    <span class="nav-logo-icon"
+                        ><i class="fas fa-shield-halved"></i
+                    ></span>
+                    <span class="nav-logo-text">SecureCoder</span>
+                </a>
+                <button
+                    class="nav-burger"
+                    id="navBurger"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="https://www.st.informatik.tu-darmstadt.de/" target="_blank" rel="noopener" class="nav-cta">STG Lab <i class="fas fa-arrow-up-right-from-square nav-ext-icon"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ========== HERO / ABOUT ========== -->
+        <section id="about" class="hero-section">
+            <div class="hero-deco hero-deco-1"></div>
+            <div class="hero-deco hero-deco-2"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <a
+                            class="hero-badge"
+                            href="https://www.athene-center.de/forschung/missionsprojekte"
+                            target="_blank"
+                            rel="noopener"
+                            >ATHENE Mission Project &middot; TU Darmstadt</a
+                        >
+                        <h1 class="hero-title">
+                            Secure<span class="accent">Coder</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Security-Aware Code Generation and Evaluation
+                        </p>
+                        <p class="hero-desc">
+                            Large Language Models are reshaping software
+                            development, but their ability to generate
+                            <em>secure</em> code remains an open challenge.
+                            SecureCoder is a collaborative research initiative
+                            at TU Darmstadt that tackles this problem
+                            end-to-end: from curating security-focused training
+                            data and building robust evaluation benchmarks, to
+                            training security-aware models and deploying
+                            constraint-based decoding techniques that prevent
+                            vulnerabilities at generation time.
+                        </p>
+                        <p class="hero-desc">
+                            Our work brings together expertise in programming
+                            languages, natural language processing, and machine
+                            learning to produce developer-friendly tools,
+                            including an IDE plugin and a unified benchmarking
+                            CLI, that raise the bar for safe AI-assisted
+                            development.
+                        </p>
+                        <div class="hero-links">
+                            <a
+                                href="https://github.com/SecureCoder-Project"
+                                class="btn btn-primary"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#research" class="btn btn-outline"
+                                >Explore Research</a
+                            >
+                        </div>
+                        <div class="hero-affiliations">
+                            <a
+                                href="https://www.athene-center.de/forschung/missionsprojekte"
+                                target="_blank"
+                                rel="noopener"
+                                class="affil-logo"
+                                aria-label="ATHENE Mission Projects"
+                            >
+                                <img
+                                    src="./static/images/Logo_of_ATHENE.png"
+                                    alt="ATHENE Center"
+                                    class="logo-athene"
+                                />
+                            </a>
+                            <span class="affil-sep"></span>
+                            <a
+                                href="https://www.tu-darmstadt.de/"
+                                target="_blank"
+                                rel="noopener"
+                                class="affil-logo"
+                                aria-label="TU Darmstadt"
+                            >
+                                <img
+                                    src="./static/images/tuda_logo_RGB.svg"
+                                    alt="TU Darmstadt"
+                                    class="logo-tuda"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-card-stack">
+                            <div class="hero-stat-card">
+                                <div class="hero-stat-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="hero-stat-label">Data Curation</div>
+                            </div>
+                            <div class="hero-stat-card">
+                                <div class="hero-stat-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="hero-stat-label">
+                                    Model Training
+                                </div>
+                            </div>
+                            <div class="hero-stat-card">
+                                <div class="hero-stat-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div class="hero-stat-label">
+                                    Constraint Decoding
+                                </div>
+                            </div>
+                            <div class="hero-stat-card">
+                                <div class="hero-stat-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="hero-stat-label">Benchmarking</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== NEWS ========== -->
+        <section id="news" class="section section-subtle">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-heading">News</h2>
+                    <p class="section-sub">
+                        Latest updates from the SecureCoder project
+                    </p>
+                </div>
+                <div class="news-list" id="newsList" data-limit="3">
+                    <div class="news-item">
+                        <span class="news-date">Loading...</span>
+                        <div class="news-body">
+                            <p>Loading news updates...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-actions">
+                    <a href="./news.html" class="btn btn-outline">
+                        See all news
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== RESEARCH ========== -->
+        <section id="research" class="section section-default">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-heading">Research</h2>
+                    <p class="section-sub">
+                        Four interconnected pillars of security-aware code
+                        generation
+                    </p>
+                </div>
+                <div class="research-grid">
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Data Creation &amp; Curation</h3>
+                        <p>
+                            High-quality security data is the foundation of
+                            everything we do. We design systematic pipelines to
+                            collect, annotate, and curate code samples that
+                            exhibit real-world vulnerabilities, covering CWE
+                            classes such as buffer overflows, SQL injection,
+                            path traversal, and more. By building standardized,
+                            reproducible datasets we enable rigorous cross-model
+                            comparison and reproducible research across the
+                            community.
+                        </p>
+                        <ul class="research-tags">
+                            <li>CWE Annotation</li>
+                            <li>Dataset Benchmarking</li>
+                            <li>SecurityEvalDataset</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Model Training</h3>
+                        <p>
+                            We develop training regimes that embed security
+                            awareness directly into language models. This
+                            includes fine-tuning with symbolic execution
+                            feedback to identify vulnerabilities at training
+                            time, GNN-augmented pre-training that models code
+                            graph structure for improved accuracy, and
+                            obfuscation grounding to enhance model robustness
+                            against adversarial or insecure patterns.
+                        </p>
+                        <ul class="research-tags">
+                            <li>Symbolic Execution</li>
+                            <li>GNN-Augmented Pre-training</li>
+                            <li>Obfuscation Grounding</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Constraint Decoding</h3>
+                        <p>
+                            Rather than relying solely on post-hoc filtering, we
+                            integrate security constraints directly into the
+                            decoding process. A dedicated discriminator model
+                            critiques generated code in real time, steering the
+                            generator away from known vulnerability patterns.
+                            This approach combines security-first prompting with
+                            formal verification principles to guarantee
+                            structural safety properties during generation.
+                        </p>
+                        <ul class="research-tags">
+                            <li>Discriminator Models</li>
+                            <li>Formal Verification</li>
+                            <li>Security-First Prompting</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>IDE &amp; Benchmarking</h3>
+                        <p>
+                            Our research is deployed as practical tools: a
+                            JetBrains IDE plugin that highlights vulnerabilities
+                            and suggests secure alternatives in real time, and a
+                            unified CLI benchmarking framework for evaluating
+                            any model against industry-standard security suites
+                            including CWEval, SecCodePLT, and CyberSecEval. Both
+                            tools are openly released for use by the broader
+                            research community.
+                        </p>
+                        <ul class="research-tags">
+                            <li>JetBrains Plugin</li>
+                            <li>CWEval / SecCodePLT</li>
+                            <li>Unified CLI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PRODUCTS ========== -->
+        <section id="products" class="section section-subtle">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-heading">Products</h2>
+                    <p class="section-sub">
+                        Open tools built from our research, ready to use in your
+                        workflow
+                    </p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div class="product-label">IDE Integration</div>
+                        <h3>JetBrains IDE Plugin</h3>
+                        <p>
+                            Brings security awareness directly into your
+                            development environment. The plugin analyzes code
+                            suggestions in real time, highlights potential
+                            vulnerabilities, and proposes secure alternatives,
+                            powered by our constraint decoding and
+                            security-first prompting techniques.
+                        </p>
+                        <div class="product-actions">
+                            <a
+                                href="https://plugins.jetbrains.com/plugin/28916-securecoder"
+                                class="btn btn-primary"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            <a
+                                href="jetbrains-plugin.html"
+                                class="btn btn-outline"
+                                >More Info</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <div class="product-label">Unified Evaluation</div>
+                        <h3>Benchmark CLI Tool</h3>
+                        <p>
+                            A unified command-line interface for rigorously
+                            evaluating the security posture of code generation
+                            models. Benchmark any model from OpenRouter or a
+                            local agent against industry-standard security
+                            suites including <strong>CWEval</strong>,
+                            <strong>SecCodePLT</strong>, and
+                            <strong>CyberSecEval</strong> , all in one tool.
+                        </p>
+                        <div class="product-actions">
+                            <a
+                                href="https://github.com/SecureCoder-Project"
+                                class="btn btn-primary"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="cli-tool.html" class="btn btn-outline"
+                                >More Info</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PUBLICATIONS ========== -->
+        <section id="publications" class="section section-subtle">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-heading">Publications</h2>
+                    <p class="section-sub">
+                        Research outputs from the SecureCoder project
+                    </p>
+                </div>
+                <div class="pub-list" id="pubList" data-limit="3">
+                    <div class="pub-card">
+                        <p class="pub-venue">Loading publications from BibTeX...</p>
+                    </div>
+                </div>
+                <div class="pub-actions">
+                    <a href="./publications.html" class="btn btn-outline">
+                        See all publications
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TEAM ========== -->
+        <section id="team" class="section section-default">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-heading">Team</h2>
+                    <p class="section-sub">
+                        Principal investigators and researchers driving the
+                        SecureCoder initiative
+                    </p>
+                </div>
+                <div class="team-grid">
+                    <a
+                        class="team-card"
+                        href="https://www.st.informatik.tu-darmstadt.de/people/mira_mezini/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <div class="team-avatar">
+                            <img
+                                src="./static/images/hessianAI_MiraMezini_0x415.jpg"
+                                alt="Mira Mezini"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Prof. Mira Mezini</div>
+                            <div class="team-role">Principal Investigator</div>
+                            <div class="team-affiliation">
+                                Software Technology Group &middot; TU Darmstadt
+                            </div>
+                            <p class="team-focus">
+                                Programming languages, software engineering, and
+                                AI-assisted development with a focus on code
+                                correctness and security.
+                            </p>
+                        </div>
+                        <span class="team-link-icon"
+                            ><i class="fas fa-arrow-right"></i
+                        ></span>
+                    </a>
+
+                    <a
+                        class="team-card"
+                        href="https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <div class="team-avatar">
+                            <img
+                                src="./static/images/Iryna-Gurevych_Ruediger-Dunker_2022_1zu1_415x415.png"
+                                alt="Iryna Gurevych"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Prof. Iryna Gurevych</div>
+                            <div class="team-role">Principal Investigator</div>
+                            <div class="team-affiliation">
+                                UKP Lab &middot; TU Darmstadt
+                            </div>
+                            <p class="team-focus">
+                                Natural language processing, information
+                                extraction, and large language model research
+                                for understanding and generating text and code.
+                            </p>
+                        </div>
+                        <span class="team-link-icon"
+                            ><i class="fas fa-arrow-right"></i
+                        ></span>
+                    </a>
+
+                    <a
+                        class="team-card"
+                        href="https://www.ml.informatik.tu-darmstadt.de/people/kkersting/index.html"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <div class="team-avatar">
+                            <img
+                                src="./static/images/kersting_kristian_2503x3466_415x415.jpg"
+                                alt="Kristian Kersting"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Prof. Kristian Kersting</div>
+                            <div class="team-role">Principal Investigator</div>
+                            <div class="team-affiliation">
+                                ML Group &middot; TU Darmstadt
+                            </div>
+                            <p class="team-focus">
+                                Machine learning, statistical relational AI, and
+                                deep learning with applications to structured
+                                prediction and reasoning.
+                            </p>
+                        </div>
+                        <span class="team-link-icon"
+                            ><i class="fas fa-arrow-right"></i
+                        ></span>
+                    </a>
+
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="./static/images/Amir_Molzam_Sharifloo.jpg"
+                                alt="Dr. Amir Molzam"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Dr. Amir Molzam</div>
+                            <div class="team-role">Postdoctoral Researcher</div>
+                            <div class="team-affiliation">
+                                Software Technology Group &middot; TU Darmstadt
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="./static/images/Tobias_Reinhard.jpg"
+                                alt="Dr. Tobias Reinhard"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Dr. Tobias Reinhard</div>
+                            <div class="team-role">Postdoctoral Researcher</div>
+                            <div class="team-affiliation">
+                                Software Technology Group &middot; TU Darmstadt
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="./static/images/Abhinav_Anand.jpg"
+                                alt="Abhinav Anand"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Abhinav Anand</div>
+                            <div class="team-role">Doctoral Researcher</div>
+                            <div class="team-affiliation">
+                                Software Technology Group &middot; TU Darmstadt
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="./static/images/Shweta_Verma.jpg"
+                                alt="Shweta Verma"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Shweta Verma</div>
+                            <div class="team-role">Doctoral Researcher</div>
+                            <div class="team-affiliation">
+                                Software Technology Group &middot; TU Darmstadt
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="./static/images/Daniel_Maninger.jpg"
+                                alt="Daniel Maninger"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Daniel Maninger</div>
+                            <div class="team-role">Doctoral Researcher</div>
+                            <div class="team-affiliation">
+                                Software Technology Group &middot; TU Darmstadt
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="./static/images/Mert_Tiftikci.jpg"
+                                alt="Mert Tiftikci"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Mert Tiftikci</div>
+                            <div class="team-role">Doctoral Researcher</div>
+                            <div class="team-affiliation">
+                                Software Technology Group &middot; TU Darmstadt
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="site-footer">
+            <div class="footer-deco footer-deco-1"></div>
+            <div class="footer-deco footer-deco-2"></div>
+            <div class="container footer-inner">
+                <div class="footer-brand">
+                    <span class="footer-logo-icon"
+                        ><i class="fas fa-shield-halved"></i
+                    ></span>
+                    <span class="footer-logo-text">SecureCoder</span>
+                </div>
+                <p class="footer-tagline">
+                    Security-Aware Code Generation &amp; Evaluation &mdash; TU
+                    Darmstadt
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/SecureCoder-Project" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <span class="footer-divider"></span>
+                    <a href="https://www.st.informatik.tu-darmstadt.de/" target="_blank" rel="noopener">STG Lab</a>
+                    <a href="https://www.informatik.tu-darmstadt.de/ukp" target="_blank" rel="noopener">UKP Lab</a>
+                    <span class="footer-divider"></span>
+                    <a href="https://www.tu-darmstadt.de/" target="_blank" rel="noopener">TU Darmstadt</a>
+                </div>
+                <p class="footer-copy">
+                    &copy; 2025 SecureCoder Project &mdash; Technische Universit&auml;t Darmstadt
+                </p>
+            </div>
+        </footer>
+
+        <script src="./js/main.js?v=20260504"></script>
+    </body>
+</html>

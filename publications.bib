@@ -1,0 +1,240 @@
+
+@inproceedings{verma-etal-2025-codessm,
+    title = "{C}ode{SSM}: Towards State Space Models for Code Understanding",
+    author = "Verma, Shweta  and
+      Anand, Abhinav  and
+      Mezini, Mira",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.1735/",
+    doi = "10.18653/v1/2025.emnlp-main.1735",
+    pages = "34219--34235",
+    ISBN = "979-8-89176-332-6",
+    abstract = "Although transformers dominate many code-specific tasks, they have significant limitations. This paper explores State Space Models (SSMs) as a promising alternative for code understanding tasks such as retrieval, classification, and clone detection. We introduce CodeSSM, the first SSM-based model trained on code corpora to assess its effectiveness. Our results demonstrate that SSMs are more sample-efficient and can extrapolate to longer contexts beyond the pretraining length. Extensive experiments show that SSMs offer a viable alternative to transformers, addressing several their limitations. Additionally, CodeSSM reduces memory usage by up to 64{\%} compared to transformers at a context length of 2048, with greater savings as context length grows.The code is available [here](https://github.com/abx04/CodeSSM)."
+}
+
+@inproceedings{erker-etal-2024-triple,
+    title = "Triple-Encoders: Representations That Fire Together, Wire Together",
+    author = "Erker, Justus-Jonas  and
+      Mai, Florian  and
+      Reimers, Nils  and
+      Spanakis, Gerasimos  and
+      Gurevych, Iryna",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.290/",
+    doi = "10.18653/v1/2024.acl-long.290",
+    pages = "5317--5332",
+    abstract = "Search-based dialog models typically re-encode the dialog history at every turn, incurring high cost.Curved Contrastive Learning, a representation learning method that encodes relative distances between utterances into the embedding space via a bi-encoder, has recently shown promising results for dialog modeling at far superior efficiency.While high efficiency is achieved through independently encoding utterances, this ignores the importance of contextualization. To overcome this issue, this study introduces triple-encoders, which efficiently compute distributed utterance mixtures from these independently encoded utterances through a novel hebbian inspired co-occurrence learning objective in a self-organizing manner, without using any weights, i.e., merely through local interactions. Empirically, we find that triple-encoders lead to a substantial improvement over bi-encoders, and even to better zero-shot generalization than single-vector representation models without requiring re-encoding. Our code (https://github.com/UKPLab/acl2024-triple-encoders) and model (https://huggingface.co/UKPLab/triple-encoders-dailydialog) are publicly available."
+}
+
+
+
+@inproceedings{
+paul2025obscuracoder,
+title={ObscuraCoder: Powering Efficient Code {LM} Pre-Training Via Obfuscation Grounding},
+author={Indraneil Paul and Haoyi Yang and Goran Glava{\v{s}} and Kristian Kersting and Iryna Gurevych},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=VYvxrD7aS0}
+}
+
+@inproceedings{paul-etal-2024-ircoder,
+    title = "{IRC}oder: Intermediate Representations Make Language Models Robust Multilingual Code Generators",
+    author = "Paul, Indraneil  and
+      Glava{\v{s}}, Goran  and
+      Gurevych, Iryna",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.802/",
+    doi = "10.18653/v1/2024.acl-long.802",
+    pages = "15023--15041",
+    abstract = "Code generation has fast become one of the most popular applications of language models (LMs). Nonetheless, research on multilingual aspects of Code-LMs, such as cross-lingual transfer between different programming languages, language-specific data augmentation, and post-hoc LM adaptation, alongside the exploitation of data sources other than the original textual content, has been much sparser than for their natural language counterparts. In particular, most mainstream Code-LMs have been pre-trained on source code files alone. In this work, we investigate the prospect of leveraging readily available compiler intermediate representations (IR){---}shared across programming languages{---}to improve the multilingual capabilities of Code-LMs and facilitate cross-lingual transfer. To this end, we first compile SLTrans, a parallel dataset consisting of nearly 4M self-contained source code files coupled with their respective intermediate representations. Next, starting from various base Code-LMs (ranging from 1.1B to 7.3B parameters), we carry out continued causal language modelling training on SLTrans, forcing the Code-LMs to (1) learn the IR language and (2) align the IR constructs with respective constructs of various programming languages. Our resulting models, dubbed IRCoder, display sizeable and consistent gains across various code generation tasks and metrics, including prompt robustness, multilingual code completion, code understanding, and instruction following."
+}
+
+@inproceedings{li-etal-2023-python,
+    title = "Python Code Generation by Asking Clarification Questions",
+    author = "Li, Haau-Sing (Xiaocheng)  and
+      Mesgar, Mohsen  and
+      Martins, Andr{\'e}  and
+      Gurevych, Iryna",
+    editor = "Rogers, Anna  and
+      Boyd-Graber, Jordan  and
+      Okazaki, Naoaki",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.799/",
+    doi = "10.18653/v1/2023.acl-long.799",
+    pages = "14287--14306",
+    abstract = "Code generation from text requires understanding the user{'}s intent from a natural languagedescription and generating an executable code snippet that satisfies this intent. While recent pretrained language models demonstrate remarkable performance for this task, these models fail when the given natural language description is under-specified. In this work, we introduce a novel and more realistic setup for this task. We hypothesize that the under-specification of a natural language description can be resolved by asking clarification questions. Therefore, we collect and introduce a new dataset named CodeClarQA containing pairs of natural language descriptions and code with created synthetic clarification questions and answers. The empirical results of our evaluation of pretrained language model performance on code generation show that clarifications result in more precisely generated code, as shown by the substantial improvement of model performance in all evaluation metrics. Alongside this, our task and dataset introduce new challenges to the community, including when and what clarification questions should be asked. Our code and dataset are available on GitHub."
+}
+
+@inproceedings{orel-etal-2025-droid,
+    title = "Droid: A Resource Suite for {AI}-Generated Code Detection",
+    author = "Orel, Daniil  and
+      Paul, Indraneil  and
+      Gurevych, Iryna  and
+      Nakov, Preslav",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.1593/",
+    doi = "10.18653/v1/2025.emnlp-main.1593",
+    pages = "31263--31289",
+    ISBN = "979-8-89176-332-6",
+    abstract = "We present DroidCollection, the most extensive open data suite for training and evaluating machine-generated code detectors, comprising over a million code samples, seven programming languages, outputs from 43 coding models, and three real-world coding domains. Alongside fully AI-generated examples, our collection includes human-AI co-authored code, as well as adversarial examples explicitly crafted to evade detection. Subsequently, we develop DroidDetect, a suite of encoder-only detectors trained using a multi-task objective over DroidCollection. Our experiments show that existing detectors' performance fails to generalise to diverse coding domains and programming languages outside of their narrow training data. We further demonstrate that while most detectors are easily compromised by humanising the output distributions using superficial prompting and alignment approaches, this problem can be easily amended by training on a small number of adversarial examples. Finally, we demonstrate the effectiveness of metric learning and uncertainty-based resampling as way to enhance detector training on possibly noisy distributions."
+}
+
+@article{10.1162/COLI.a.19,
+    author = {Dutta, Subhabrata and Kaufmann, Timo and Glavaš, Goran and Habernal, Ivan and Kersting, Kristian and Kreuter, Frauke and Mezini, Mira and Gurevych, Iryna and Hüllermeier, Eyke and Schütze, Hinrich},
+    title = {Problem Solving Through Human–AI Preference-based Cooperation},
+    journal = {Computational Linguistics},
+    volume = {51},
+    number = {4},
+    pages = {1337-1372},
+    year = {2025},
+    month = {12},
+    abstract = {While there is a widespread belief that artificial general intelligence—or even superhuman AI—is imminent, complex problems in expert domains are far from being solved. We argue that such problems require human–AI cooperation and that the current state of the art in generative AI is unable to play the role of a reliable partner due to a multitude of shortcomings, including difficulty in keeping track of a complex solution artifact (e.g., a software program), limited support for versatile human preference expression, and lack of adapting to human preference in an interactive setting. To address these challenges, we propose HAI-Co2, a novel human–AI co-construction framework. We take first steps towards a formalization of HAI-Co2 and discuss the difficult open research problems that it faces.},
+    issn = {0891-2017},
+    doi = {10.1162/COLI.a.19},
+    url = {https://doi.org/10.1162/COLI.a.19},
+    eprint = {https://direct.mit.edu/coli/article-pdf/51/4/1337/2539252/coli.a.19.pdf},
+}
+
+@inproceedings{sakharova-etal-2025-integrating,
+    title = "Integrating Symbolic Execution into the Fine-Tuning of Code-Generating {LLM}s",
+    author = "Sakharova, Marina  and
+      Anand, Abhinav  and
+      Mezini, Mira",
+    editor = "Ebrahimi, Abteen  and
+      Haider, Samar  and
+      Liu, Emmy  and
+      Haider, Sammar  and
+      Leonor Pacheco, Maria  and
+      Wein, Shira",
+    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 4: Student Research Workshop)",
+    month = apr,
+    year = "2025",
+    address = "Albuquerque, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-srw.27/",
+    doi = "10.18653/v1/2025.naacl-srw.27",
+    pages = "271--278",
+    ISBN = "979-8-89176-192-6",
+    abstract = "Code-generating Large Language Models (LLMs) have become essential tools in modern software development, enhancing productivity and accelerating development. This paper aims to investigate the fine-tuning of code-generating LLMs using Reinforcement Learning and Direct Preference Optimization, further improving their performance. To achieve this, we enhance the training data for the reward model with the help of symbolic execution techniques, ensuring more comprehensive and objective data. With symbolic execution, we create a custom dataset that better captures the nuances in code evaluation. Our reward models, fine-tuned on this dataset, demonstrate significant improvements over the baseline, CodeRL, in estimating the quality of generated code. Our code-generating LLMs, trained with the help of reward model feedback, achieve similar results compared to the CodeRL benchmark."
+}
+
+@inproceedings{10.1145/3639476.3639770,
+author = {Maninger, Daniel and Narasimhan, Krishna and Mezini, Mira},
+title = {Towards Trustworthy AI Software Development Assistance},
+year = {2024},
+isbn = {9798400705007},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3639476.3639770},
+doi = {10.1145/3639476.3639770},
+abstract = {It is expected that in the near future, AI software development assistants will play an important role in the software industry. However, current software development assistants tend to be unreliable, often producing incorrect, unsafe, or low-quality code. We seek to resolve these issues by introducing a holistic architecture for constructing, training, and using trustworthy AI software development assistants. In the center of the architecture, there is a foundational LLM trained on datasets representative of real-world coding scenarios and complex software architectures, and fine-tuned on code quality criteria beyond correctness. The LLM will make use of graph-based code representations for advanced semantic comprehension. We envision a knowledge graph integrated into the system to provide up-to-date background knowledge and to enable the assistant to provide appropriate explanations. Finally, a modular framework for constrained decoding will ensure that certain guarantees (e.g., for correctness and security) hold for the generated code.},
+booktitle = {Proceedings of the 2024 ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results},
+pages = {112–116},
+numpages = {5},
+location = {Lisbon, Portugal},
+series = {ICSE-NIER'24}
+}
+
+@inproceedings {277196,
+author = {Nikolaos Alexopoulos and Manuel Brack and Jan Philipp Wagner and Tim Grube and Max M{\"u}hlh{\"a}user},
+title = {How Long Do Vulnerabilities Live in the Code? A {Large-Scale} Empirical Measurement Study on {FOSS} Vulnerability Lifetimes},
+booktitle = {31st USENIX Security Symposium (USENIX Security 22)},
+year = {2022},
+isbn = {978-1-939133-31-1},
+address = {Boston, MA},
+pages = {359--376},
+url = {https://www.usenix.org/conference/usenixsecurity22/presentation/alexopoulos},
+publisher = {USENIX Association},
+month = aug
+}
+
+@inproceedings{10.5555/3618408.3618533,
+author = {Brack, Manuel and Schramowski, Patrick and Deiseroth, Bj\"{o}rn and Kersting, Kristian},
+title = {ILLUME: rationalizing vision-language models through human interactions},
+year = {2023},
+publisher = {JMLR.org},
+abstract = {Bootstrapping from pre-trained language models has been proven to be an efficient approach for building vision-language models (VLM) for tasks such as image captioning or visual question answering. However, outputs of these models rarely align with user's rationales for specific answers. In order to improve this alignment and reinforce commonsense reasons, we propose a tuning paradigm based on human interactions with machine generated data. Our ILLUME executes the following loop: Given an image-question-answer prompt, the VLM samples multiple candidate rationales, and a human critic provides feedback via preference selection, used for fine-tuning. This loop increases the training data and gradually carves out the VLM's rationalization capabilities that are aligned with human intent. Our exhaustive experiments demonstrate that ILLUME is competitive with standard supervised fine-tuning while using significantly fewer training data and only requiring minimal feedback.},
+booktitle = {Proceedings of the 40th International Conference on Machine Learning},
+articleno = {125},
+numpages = {17},
+location = {Honolulu, Hawaii, USA},
+series = {ICML'23}
+}
+
+@inproceedings{10.5555/3666122.3667224,
+author = {Brack, Manuel and Friedrich, Felix and Hintersdorf, Dominik and Struppek, Lukas and Schramowski, Patrick and Kersting, Kristian},
+title = {SEGA: instructing text-to-image models using semantic guidance},
+year = {2023},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. However, achieving one-shot generation that aligns with the user's intent is nearly impossible, yet small changes to the input prompt often result in very different images. This leaves the user with little semantic control. To put the user in control, we show how to interact with the diffusion process to flexibly steer it along semantic directions. This semantic guidance (SEGA) generalizes to any generative architecture using classifier-free guidance. More importantly, it allows for subtle and extensive edits, changes in composition and style, as well as optimizing the overall artistic conception. We demonstrate SEGA's effectiveness on both latent and pixel-based diffusion models such as Stable Diffusion, Paella and DeepFloyd-IF using a variety of tasks, thus providing strong evidence for its versatility, flexibility and improvements over existing methods. https://huggingface.co/docs/diffusers/api/pipelines/semantic_stable_diffusion},
+booktitle = {Proceedings of the 37th International Conference on Neural Information Processing Systems},
+articleno = {1102},
+numpages = {25},
+location = {New Orleans, LA, USA},
+series = {NIPS '23}
+}
+
+@inproceedings{10.5555/3666122.3668891,
+author = {Deiseroth, Bj\"{o}rn and Deb, Mayukh and Weinbach, Samuel and Brack, Manuel and Schramowski, Patrick and Kersting, Kristian},
+title = {ATMAN: understanding transformer predictions through memory efficient attention manipulation},
+year = {2023},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Generative transformer models have become increasingly complex, with large numbers of parameters and the ability to process multiple input modalities. Current methods for explaining their predictions are resource-intensive. Most crucially, they require prohibitively large amounts of additional memory since they rely on backpropagation which allocates almost twice as much GPU memory as the forward pass. This renders it difficult, if not impossible, to use explanations in production. We present ATMAN that provides explanations of generative transformer models at almost no extra cost. Specifically, ATMAN is a modality-agnostic perturbation method that manipulates the attention mechanisms of transformers to produce relevance maps for the input with respect to the output prediction. Instead of using backpropagation, ATMAN applies a parallelizable token-based search method relying on cosine similarity neighborhood in the embedding space. Our exhaustive experiments on text and image-text benchmarks demonstrate that ATMAN outperforms current state-of-the-art gradient-based methods on several metrics and models while being computationally efficient. As such, ATMAN is suitable for use in large model inference deployments.},
+booktitle = {Proceedings of the 37th International Conference on Neural Information Processing Systems},
+articleno = {2769},
+numpages = {24},
+location = {New Orleans, LA, USA},
+series = {NIPS '23}
+}
+
+
+@inproceedings{10.5555/3737916.3740451,
+author = {Skryagin, Arseny and Divo, Felix and Ali, Mohammad Amin and Dhami, Devendra Singh and Kersting, Kristian},
+title = {Graph neural networks need cluster-normalize-activate modules},
+year = {2024},
+isbn = {9798331314385},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Graph Neural Networks (GNNs) are non-Euclidean deep learning models for graph-structured data. Despite their successful and diverse applications, oversmoothing prohibits deep architectures due to node features converging to a single fixed point. This severely limits their potential to solve complex tasks. To counteract this tendency, we propose a plug-and-play module consisting of three steps: Cluster → Normalize → Activate (CNA). By applying CNA modules, GNNs search and form super nodes in each layer, which are normalized and activated individually. We demonstrate in node classification and property prediction tasks that CNA significantly improves the accuracy over the state-of-the-art. Particularly, CNA reaches 94.18\% and 95.75\% accuracy on Cora and CiteSeer, respectively. It further benefits GNNs in regression tasks as well, reducing the mean squared error compared to all baselines. At the same time, GNNs with CNA require substantially fewer learnable parameters than competing architectures.},
+booktitle = {Proceedings of the 38th International Conference on Neural Information Processing Systems},
+articleno = {2535},
+numpages = {24},
+location = {Vancouver, BC, Canada},
+series = {NIPS '24}
+}
